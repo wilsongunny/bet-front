@@ -80,7 +80,7 @@ const SportsPage = () => {
     const tabChangeHandler = (event: React.SyntheticEvent, index: number) => {
         setActiveTab(tabs.find((e: TabProps) => e.index === index));
         setSportsMatchs([]);
-        navigate(`/sports/${activeSports}/${index}`, { replace: true });
+        navigate(`/sports/${activeSports}/${index+1}`, { replace: true });
     };
 
     const activeSportsHandler = (SportId: number) => {
