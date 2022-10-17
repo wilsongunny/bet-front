@@ -57,7 +57,7 @@ const SportsPage = () => {
     const navigate = useNavigate();
     const { search } = useSelector((store) => store.sports);
     const [activeSports, setActiveSports] = useState<number>(Number(params?.sportsId) || 0);
-    const [activeTab, setActiveTab] = useState<TabProps | undefined>(tabs[params.tabId || 1]);
+    const [activeTab, setActiveTab] = useState<TabProps | undefined>(tabs[Number(params.tabId) + 1 || 1]);
     const [activeSportsData, setActiveSportsData] = useState<SportsListProps>(inintSportsData);
     const [sportsLists, setSportsLists] = useState<SportsListProps[]>([]);
     const [sportsMatchs, setSportsMatchs] = useState<SportsMatchProps[]>([]);
@@ -80,7 +80,7 @@ const SportsPage = () => {
     const tabChangeHandler = (event: React.SyntheticEvent, index: number) => {
         setActiveTab(tabs.find((e: TabProps) => e.index === index));
         setSportsMatchs([]);
-        navigate(`/sports/${activeSports}/${index+1}`, { replace: true });
+        navigate(`/sports/${activeSports}/${index}`, { replace: true });
     };
 
     const activeSportsHandler = (SportId: number) => {
