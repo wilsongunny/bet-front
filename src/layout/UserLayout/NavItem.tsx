@@ -2,11 +2,11 @@ import React, { memo, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { CardContent, Grid, Tab, Tabs, Typography, useTheme } from '@mui/material';
-// import KeyIcon from '@mui/icons-material/KeyTwoTone';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import SettingsIcon from '@mui/icons-material/SettingsTwoTone';
 import CreditCardIcon from '@mui/icons-material/CreditCardTwoTone';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEventsTwoTone';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutlineTwoTone';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEventsTwoTone';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -39,12 +39,12 @@ const tabsOption = [
         label: <FormattedMessage id="Preferences" />,
         link: '/user/preferences',
         icon: <SettingsIcon />
+    },
+    {
+        label: <FormattedMessage id="History" />,
+        link: '/user/history',
+        icon: <ManageSearchIcon />
     }
-    // {
-    //     label: <FormattedMessage id="Change Password" />,
-    //     link: '/user/changepassword',
-    //     icon: <KeyIcon />
-    // }
 ];
 
 const NavItem = () => {

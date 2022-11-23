@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import TableHistory from './history';
 
 import { Card, CardContent, CardHeader, Divider, Grid, IconButton, Skeleton, Stack, Typography } from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';

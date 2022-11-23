@@ -1,7 +1,7 @@
 import { FormattedMessage } from 'react-intl';
 import { SidebarItem } from 'ui-component';
 // import { CasinoIcon, InplayIcon, SportsIcon, UpcomingIcon } from 'ui-component/SvgIcon';
-import { InplayIcon, SportsIcon, UpcomingIcon } from 'ui-component/SvgIcon';
+import { SportsIcon, UpcomingIcon } from 'ui-component/SvgIcon';
 
 interface DashboardMenuProps {
     id: string;
@@ -34,18 +34,18 @@ const dashboard: DashboardMenuProps = {
             ),
             breadcrumbs: false
         },
-        {
-            id: 'inplay',
-            title: <FormattedMessage id="Inplay" />,
-            type: 'item',
-            url: '/inplay',
-            icon: (
-                <SidebarItem index={1}>
-                    <InplayIcon />
-                </SidebarItem>
-            ),
-            breadcrumbs: false
-        },
+        // {
+        //     id: 'inplay',
+        //     title: <FormattedMessage id="Inplay" />,
+        //     type: 'item',
+        //     url: '/inplay',
+        //     icon: (
+        //         <SidebarItem index={1}>
+        //             <InplayIcon />
+        //         </SidebarItem>
+        //     ),
+        //     breadcrumbs: false
+        // },
         {
             id: 'upcoming',
             title: <FormattedMessage id="Upcoming" />,

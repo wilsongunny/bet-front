@@ -38,6 +38,7 @@ export type APIContextType = {
     betSport: (data: any, type: string, stake: number) => Promise<any>;
     getMybets: (status: string) => Promise<any>;
     getCasinoHistory: (type: number, perPage: number) => Promise<any>;
+    getBalanceHistorysList:(args:any) => Promise<any>;
 };
 
 export interface InitialLoginContextProps {

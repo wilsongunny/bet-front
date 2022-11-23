@@ -106,7 +106,7 @@ const ConnectMetamask = () => {
                     </Stack>
                 </Button>
             </AnimateButton>
-            <AnimateButton>
+            {/* <AnimateButton>
                 <Button
                     disabled={loading}
                     disableElevation
@@ -205,7 +205,7 @@ const ConnectMetamask = () => {
                         )}
                     </Stack>
                 </Button>
-            </AnimateButton>
+            </AnimateButton> */}
         </Stack>
     );
 };

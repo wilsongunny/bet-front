@@ -12,9 +12,10 @@ const MyBetsLayout = () => {
     const navigate = useNavigate();
     const { pathname } = useLocation();
     const [activeTab, setActiveTab] = useState<number>(0);
+    const pathArr = ['/my-bets', '/my-bets/settled', '/my-bets/history'];
 
     const tabChangeHandler = (event: React.SyntheticEvent, index: number) => {
-        navigate(index === 0 ? '/my-bets' : '/my-bets/settled');
+        navigate(pathArr[index]);
         setActiveTab(index);
     };
 
@@ -25,6 +26,9 @@ const MyBetsLayout = () => {
         }
         if (path === '/my-bets/settled') {
             setActiveTab(1);
+        }
+        if (path === '/my-bets/history') {
+            setActiveTab(2);
         }
     }, [pathname]);
 
@@ -45,6 +49,7 @@ const MyBetsLayout = () => {
             <WTabs value={activeTab} onChange={tabChangeHandler} aria-label="icon">
                 <WTab label={<FormattedMessage id="Active" />} iconPosition="start" />
                 <WTab label={<FormattedMessage id="Settled" />} iconPosition="start" />
+                <WTab label={<FormattedMessage id="History" />} iconPosition="start" />
             </WTabs>
             <Outlet />
         </>

@@ -155,6 +155,11 @@ export const APIProvider = ({ children }: { children: React.ReactElement }) => {
         return res;
     };
 
+    const getBalanceHistorysList = async (...args: any) => {
+        const res = await axios.post(`api/v2/payments/balancehistory`, ...args);
+        return res;
+    };
+
     const betSport = async (data: any, type: string, stake: number) => {
         const res = await axios.post('api/v2/sports/bet', {
             data,
@@ -223,6 +228,7 @@ export const APIProvider = ({ children }: { children: React.ReactElement }) => {
                 betSport,
                 getMybets,
                 getCasinoHistory,
+                getBalanceHistorysList,
                 uploadFile,
                 deleteFile
             }}

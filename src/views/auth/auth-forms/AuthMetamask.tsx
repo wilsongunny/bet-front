@@ -110,7 +110,7 @@ const AuthMetamask = () => {
     }, [active, isLogin]);
 
     return (
-        <Grid item xs={12} my={2}>
+        <Grid item xs={12}>
             <Stack direction="row" justifyContent="space-around">
                 <AnimateButton>
                     <Button
@@ -143,9 +143,9 @@ const AuthMetamask = () => {
                         </Box>
                     </Button>
                 </AnimateButton>
-                <AnimateButton>
+                {/* <AnimateButton>
                     <Button
-                        disabled={loading}
+                        disabled
                         disableElevation
                         fullWidth
                         onClick={() => handleClick(CoinbaseWallet)}
@@ -153,8 +153,8 @@ const AuthMetamask = () => {
                         variant="outlined"
                         sx={{
                             color: 'grey.700',
-                            backgroundColor: theme.palette.mode === 'dark' ? theme.palette.dark.main : theme.palette.grey[50],
-                            borderColor: theme.palette.mode === 'dark' ? theme.palette.dark.light + 20 : theme.palette.grey[100]
+                            backgroundColor: '#172a36',
+                            borderColor: '#172a36'
                         }}
                     >
                         <Box sx={{ position: 'relative', width: '36px', height: '36px', mx: 0.9 }}>
@@ -176,7 +176,7 @@ const AuthMetamask = () => {
                 </AnimateButton>
                 <AnimateButton>
                     <Button
-                        disabled={loading}
+                        disabled
                         disableElevation
                         fullWidth
                         onClick={() => handleClick(WalletConnect)}
@@ -184,7 +184,7 @@ const AuthMetamask = () => {
                         variant="outlined"
                         sx={{
                             color: 'grey.700',
-                            backgroundColor: theme.palette.mode === 'dark' ? theme.palette.dark.main : theme.palette.grey[50],
+                            backgroundColor: '#172a36',
                             borderColor: theme.palette.mode === 'dark' ? theme.palette.dark.light + 20 : theme.palette.grey[100]
                         }}
                     >
@@ -204,7 +204,7 @@ const AuthMetamask = () => {
                             />
                         </Box>
                     </Button>
-                </AnimateButton>
+                </AnimateButton> */}
             </Stack>
         </Grid>
     );
