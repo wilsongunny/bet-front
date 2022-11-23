@@ -21,6 +21,9 @@ import Event from './component/Event';
 import Trophy from 'assets/images/sports/trophy.png';
 import { useSelector } from 'store';
 
+import Back from 'assets/images/sports/gana.jpg';
+import Back2 from 'assets/images/sports/gana2.jpg';
+
 const UpcomingPage = () => {
     const theme = useTheme();
     const { boxShadow } = useConfig();
@@ -242,7 +245,13 @@ const UpcomingPage = () => {
         <Transitions in direction="up" type="slide">
             <Box className="sports-items">
                 <PerfectScrollbar aria-setsize={1}>
-                    <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
+                    <Box>
+                        <img className="backDesktop" src={Back} alt="" />
+                    </Box>
+                    <Box>
+                        <img className="backMobile" src={Back2} alt="" />
+                    </Box>
+                    <Stack className="cate" direction="row" spacing={2} sx={{ mt: 2 }}>
                         {sportsLists.map((item, key) => (
                             <Badge key={key} badgeContent={item.count} color="primary" max={10000}>
                                 <SportsItem
@@ -268,15 +277,6 @@ const UpcomingPage = () => {
                         <Typography variant="h3">
                             {activeSportsData?.SportName && <FormattedMessage id={activeSportsData.SportName} />}
                         </Typography>
-                        <Stack direction="row" spacing={1}>
-                            <Typography variant="body1">
-                                <FormattedMessage id="Home" />
-                            </Typography>
-                            <Typography variant="body1">/</Typography>
-                            <Typography variant="body2">
-                                {activeSportsData?.SportName && <FormattedMessage id={activeSportsData.SportName} />}
-                            </Typography>
-                        </Stack>
                     </Stack>
                     <img className="background" src={`${BASE_URL}/${activeSportsData?.img}`} alt="" />
                     <img className="trophy" src={Trophy} alt="" />

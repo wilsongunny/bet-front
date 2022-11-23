@@ -21,6 +21,8 @@ import Transitions from 'ui-component/extended/Transitions';
 import { FutureIcon, InplaysIcon, NexthoursIcon } from 'ui-component/SvgIcon';
 import Event from './component/Event';
 import Trophy from 'assets/images/sports/trophy.png';
+import Back from 'assets/images/sports/gana.jpg';
+import Back2 from 'assets/images/sports/gana2.jpg';
 
 const tabs = [
     // {
@@ -278,7 +280,13 @@ const SportsPage = () => {
         <Transitions in direction="up" type="slide">
             <Box className="sports-items">
                 <PerfectScrollbar aria-setsize={1}>
-                    <Stack direction="row" spacing={2}>
+                    <Box>
+                        <img className="backDesktop" src={Back} alt="" />
+                    </Box>
+                    <Box>
+                        <img className="backMobile" src={Back2} alt="" />
+                    </Box>
+                    <Stack className="cate" direction="row" spacing={2}>
                         {sportsLists.map((item, key) => (
                             <SportsItem
                                 key={key}
@@ -305,15 +313,6 @@ const SportsPage = () => {
                         <Typography className="text-ellipse" variant="h3">
                             {activeSportsData?.SportName && <FormattedMessage id={activeSportsData.SportName} />}
                         </Typography>
-                        <Stack direction="row" spacing={1}>
-                            <Typography variant="body1">
-                                <FormattedMessage id="Home" />
-                            </Typography>
-                            <Typography variant="body1">/</Typography>
-                            <Typography variant="body2">
-                                {activeSportsData?.SportName && <FormattedMessage id={activeSportsData.SportName} />}
-                            </Typography>
-                        </Stack>
                     </Stack>
                     <img className="background" src={`${BASE_URL}/${activeSportsData?.img}`} alt="" />
                     <img className="trophy" src={Trophy} alt="" />

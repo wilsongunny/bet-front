@@ -898,6 +898,7 @@ $gray-700: #4e5154;
             width: 85vmin;
             padding-bottom: 85vmin;
         }
+        
 
         .game-content-plinko {
             .plinkoCustomHistory {
@@ -2259,4 +2260,29 @@ $gray-700: #4e5154;
 .casino-icon {
     font-size: 1rem !important;
     height: 1rem !important;
+}
+.backDesktop,.backMobile{
+ width: 100%;
+ padding: 20px;
+ border-radius: 40px;
+ 
+}
+.backDesktop{
+    display: block;
+}
+.backMobile{
+    display: none;
+}
+.cate{
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .backDesktop{
+        display: none;
+    }
+    .backMobile{
+        display: block;
+    }
 }

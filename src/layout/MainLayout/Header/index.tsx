@@ -43,7 +43,7 @@ const Header = () => {
                             alt="Logo"
                             draggable={false}
                             src={isMobile ? Logo2Img : Logo1Img}
-                            style={{ height: '60px', userSelect: 'none', padding: isMobile ? '20px 0' : '0px' }}
+                            style={{ height: '80px', userSelect: 'none', padding: isMobile ? '20px 0' : '0px' }}
                         />
                     </a>
                 </Box>
